@@ -2,6 +2,7 @@
 cc.FileUtils:getInstance():setPopupNotify(false)
 cc.FileUtils:getInstance():addSearchPath("src/")
 cc.FileUtils:getInstance():addSearchPath("res/")
+cc.FileUtils:getInstance():addSearchPath("src/logger")
 
 require "config"
 require "cocos.init"
@@ -9,6 +10,13 @@ require "cocos.init"
 function cclog(...)
     print(string.format(...))
 end
+
+nimologger = require("nimologger")
+nimologger:printByTag("DEBUG", "control", "Debug-control")
+nimologger:printByTag("ERROR", "remote", "Error-remote")
+nimologger:printByTag("FATAL", "tag", "FATAL-tag")
+nimologger:printByTag("INFO", "local", "INFO-local")
+
 
 
 local function main()

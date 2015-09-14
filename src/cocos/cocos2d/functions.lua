@@ -307,7 +307,6 @@ function import(moduleName, currentModuleName)
 end
 
 function handler(obj, method)
-    print("check handler")
     return function(...)
         return method(obj, ...)
     end

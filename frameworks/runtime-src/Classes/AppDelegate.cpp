@@ -98,6 +98,6 @@ void AppDelegate::applicationDidEnterBackground()
 void AppDelegate::applicationWillEnterForeground()
 {
     Director::getInstance()->startAnimation();
-
+    
     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
